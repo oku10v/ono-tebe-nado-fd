@@ -1,6 +1,3 @@
-.body {
-background-color: white;
-}
 .header {
 display: grid;
 grid-template-columns: 1fr min-content 1fr;
@@ -8,29 +5,49 @@ align-items: center;
 width:100%;
 padding: 93px 50px 95px 50px ;
 }
+
 .header__links-list {
 display:flex;
 gap: 32px;
 word-spacing: 1px;
 list-style: circle;
 }	
+
 .header__links-list-item_no-bullit {
 list-style: none;
 }
+
 .header__link {
 font-size: 18px;
 font-style: normal;
 line-height: 25px;
 text-underline-offset: 4px;
 }
+
+.address__link {
+font-size: 18px;
+font-style: normal;
+line-height: 25px;
+text-underline-offset: 4px;
+}
+
+.address__text {
+font-size: 18px;
+font-style: normal;
+line-height: 25px;
+text-underline-offset: 4px;
+}
+
 .header__link_active {
 text-decoration: none;
 }
+
 .header__logo-image {
 display: block;
 width: 148px;
 height: 105px;
 }
+
 .header__address {
 display: flex;
 flex-direction: column;
@@ -38,32 +55,40 @@ justify-self: end;
 align-items: flex-start;
 max-width: 240px;
 }
+
+.address {
+display: flex;
+flex-direction: column;
+justify-self: end;
+align-items: flex-start;
+max-width: 1100px;
+}
+
 .cover {
 position: relative;
 height: 100%;
 padding: 170px 50px 50px 50px;
 color: white;
 text-transform: uppercase;
-background-image: url(/images/cover.jpg);
+background-image: url(../images/cover.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 }
+
 .overlay {
 position: absolute;
 inset: 0;
-z-index: 0;
+z-index: 1;
 width: 100%;
 height: 100%;
 opacity: 0.6;
 background-color: black;
 }
-.h1 {
-color: white;
-text-transform:uppercase;
-}
+
 .cover__tittle {
 position: relative;
+z-index: 2;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -75,39 +100,46 @@ font-weight: bold;
 font-size: 100px;
 text-transform: uppercase;
 }
+
 .aligned-text {
 display: block;
 line-height: 1;
 letter-spacing: 30px;
 }
+
 .aligned-text_left {
 text-align: left;
 }
+
 .aligned-text_center {
 margin-right: -30px;
 text-align: center;
 }
+
 .aligned-text_right {
 margin-right: -30px;
 text-align: right;
 }
+
 .cover__description {
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
+
 .cover__description-text {
-z-index: 1;
+z-index: 2;
 color: white;
 font-weight: 400;
 font-size: 22px;
 text-transform: uppercase;
 word-spacing: 18px;
 }
+
 .bet-button {
-z-index: 1;
-width: 256px;
-height: 51px;
+z-index: 2;
+min-width: 256px;
+min-height: 51px;
 border: solid 1px currentColor;
 color: white;
 font-size: 22px;
@@ -115,59 +147,58 @@ text-transform: uppercase;
 background: transparent;
 cursor: pointer;
 }
+
 .lots {
+height: 723px;
 margin-top: 180px;
 }
+
 .lots__heading {
 padding-bottom: 27px;
 padding-left: 63px;
 font-size: 40px;
-	font-style: bold;
+font-style: bold;
+text-transform:uppercase;
 }
+
 .lots__card-list {
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+justify-content: flex-start;
 gap: 25px;
+padding-left: 25px;
 }
+
 .lots__card-list-item {
 width: 334px;
 min-height: 596px;
 list-style: none;
 }
+
 .card_type_film {
-position:relative;
 height: 100%;
-background: url(/images/card-lot-01.jpg);
+background: url(../images/card-lot-01.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 }
+
 .card_type_book {
-position:relative;
 height: 100%;
-background: url(/images/card-lot-02.jpg);
+background: url(../images/card-lot-02.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 }
+
 .card_type_picture {
-position:relative;
 height: 100%;
-background: url(/images/card-lot-03.jpg);
+background: url(../images/card-lot-03.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 }
-.a {
-display: block;
-height: 100%;
-}
-.card-link {
-z-index: 1;
-height: 100%;
-color: white;
-}
+
 .card {
 position: relative;
 display: flex;
@@ -176,28 +207,40 @@ flex-wrap: nowrap;
 justify-content: space-between;
 align-items: baseline;
 width: 334;
-height: 596;
+min-height: 596;
 padding: 50px 40px;
 }
+
+.card-link {
+z-index: 2;
+height: 100%;
+color: white;
+}
+
 .card__title {
+z-index: 2;
 color: white;
 font-size: 22px;
 font-style: bold;
 text-transform: uppercase;
 }
+
 .card__text {
-z-index: 1;
+z-index: 2;
 color: white;
 font-size: 20px;
 text-decoration: none;
 }
+
 .lots__look-more-link {
+position: absolute;
 padding-top: 31px;
-padding-left: 32px;
+padding-left: 63px;
 font-size: 20px;
 text-decoration-thickness: 1px;
 text-underline-offset: 4px;
 }
+
 .about {
 display: grid;
 grid-template-columns: 334px 740px;
@@ -205,6 +248,7 @@ margin-top: 120px;
 padding-top: 35px;
 padding-left: 25px;
 }
+
 .about__logo {
 display: flex;
 justify-self: center;
@@ -216,65 +260,80 @@ height: 240px;
 border-radius: 50%;
 background-color: black;
 }
+
 .about__logo-image {
 width: 148px;
 height: 114px;
 }
+
 .about__title {
 font-size: 40px;
 font-style: bold;
 line-height: 100%;
+text-transform: uppercase;
 }
+
 .about__text {
 display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 1fr;
-width: 688px;
-height: 415px;
+grid-template-columns: 690px;
+grid-template-rows: 120px auto;
+gap: 25px;
+height: 420px;
 padding-top: 105px;
 font-size: 20px;
 }
+
 .about__column-right {
 padding-top: 104px;
 padding-left: 25px;
 }
+
 .footer {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 margin-top: 180px;
 margin-right: 50px;
+margin-bottom: 180px;
 margin-left: 50px;
 }
+
 .footer__menu-list {
 text-align: start;
 }
+
 .footer__menu-list-item {
 font-size: 18px;
 text-align: center;
 text-underline-offset: 5px;
 list-style: none;
 }
+
 .footer__menu-link_active {
 text-align: center;
 text-decoration: none;
 }
+
 .footer__menu-list-item_adress {
 font-size: 18px;
 line-height:24.5px;
-text-align: start;
+text-align: left;
 text-underline-offset: 5px;
 list-style: none;
 }
+
 .footer__column-right {
 padding-left: 90px;
 }
+
 .footer__social-list {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 gap:45px;
+list-style-type: none;
 }
+
 .footer__social-icon {
 width: 48px;
 height: 48px;
