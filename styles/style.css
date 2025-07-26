@@ -36,8 +36,8 @@ font-size: 18px;
 font-style: normal;
 line-height: 25px;
 text-underline-offset: 4px;
+text-align: left;
 }
-
 .header__link_active {
 text-decoration: none;
 }
@@ -166,6 +166,7 @@ flex-wrap: wrap;
 justify-content: flex-start;
 gap: 25px;
 padding-left: 25px;
+margin-bottom: 30px;
 }
 
 .lots__card-list-item {
@@ -176,27 +177,17 @@ list-style: none;
 
 .card_type_film {
 background: url(../images/card-lot-01.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
 }
 
 .card_type_book {
 background: url(../images/card-lot-02.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
 }
 
 .card_type_picture {
 background: url(../images/card-lot-03.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
 }
 
 .card {
-height: 100%;
 position: relative;
 display: flex;
 flex-direction: column;
@@ -204,14 +195,19 @@ flex-wrap: nowrap;
 justify-content: space-between;
 align-items: baseline;
 width: 334;
+height: 100%;
 min-height: 596;
 padding: 50px 40px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 
 .card-link {
 z-index: 2;
 height: 100%;
 color: white;
+text-decoration: none;
 }
 
 .card__title {
@@ -220,6 +216,7 @@ color: white;
 font-size: 22px;
 font-style: bold;
 text-transform: uppercase;
+text-decoration: underline;
 }
 
 .card__text {
@@ -230,18 +227,16 @@ text-decoration: none;
 }
 
 .lots__look-more-link {
-position: relative;
-top: 31px;
-left: 63px;
 font-size: 20px;
 text-decoration-thickness: 1px;
 text-underline-offset: 4px;
+padding-left: 63px;
 }
 
 .about {
 display: grid;
 grid-template-columns: 334px 740px;
-margin-top: 150px;
+margin-top: 120px;
 padding-top: 35px;
 padding-left: 25px;
 }
@@ -289,9 +284,8 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr;
 margin-top: 180px;
-margin-right: 50px;
-margin-bottom: 180px;
-margin-left: 50px;
+padding-right: 50px;
+padding-left: 50px;
 }
 
 .footer__menu-list {
@@ -306,16 +300,7 @@ list-style: none;
 }
 
 .footer__menu-link_active {
-text-align: center;
 text-decoration: none;
-}
-
-.footer__menu-list-item_adress {
-font-size: 18px;
-line-height:24.5px;
-text-align: left;
-text-underline-offset: 5px;
-list-style: none;
 }
 
 .footer__column-right {
